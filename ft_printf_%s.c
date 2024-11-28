@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:11:22 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:34:51 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/28 18:44:41 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_prints(char *str)
 	int	i;
 
 	if (!str)
-		return (ft_printchar("(null)"));
+		return (write (1, "(null)", 6));
 	i = 0;
 	while (str[i])
 	{
