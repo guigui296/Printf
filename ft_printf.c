@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:08:59 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 17:27:16 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/28 18:14:08 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,30 @@ static int	ft_conver(va_list args, const char format)
 	return (len);
 }
 
-int	printf(const char *, ...)
+int	printf(const char *format, ...)
 {
-	
+	va_list args;
+	int		i;
+	int		l;
+
+	i = 0;
+	l = 0;
+	va_start(args, format);
+	if (!format)
+		return (va_end(args), -1);
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			if (format[i + 1] == '\0')
+				return (va_end(args), -1);
+			i++;
+			l += ft_conver(args, format[i]);
+		}
+		else
+			l += write(1, &format[i], 1);
+		i++;
+	}
+	va_end(args);
+	return (l);
 }
