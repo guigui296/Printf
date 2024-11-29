@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 14:35:21 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 17:27:41 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/29 08:57:01 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_printchar(char c);

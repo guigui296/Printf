@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:41:25 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:34:54 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/29 09:05:25 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_printu(int nb)
 {
-	long	n;
-	int		l;
+	unsigned int	n;
+	int				l;
 
 	n = nb;
 	l = 0;

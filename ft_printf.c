@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:08:59 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:34:23 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/29 10:19:55 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	ft_conver(va_list args, const char format)
 	return (len);
 }
 
-int	printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		i;

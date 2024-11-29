@@ -6,7 +6,7 @@
 #    By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/28 15:50:19 by gbehra            #+#    #+#              #
-#    Updated: 2024/11/28 17:29:37 by gbehra           ###   ########.fr        #
+#    Updated: 2024/11/29 09:21:59 by gbehra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,25 +17,23 @@ ft_printf_%xX.c ft_printf_%p.c ft_printf_%u.c
 
 OBJS	= ${SRCS:.c=.o}
 
-CC		= gcc
+CC		= cc
 
 FLAGS	= -Wall -Werror -Wextra
 
-LIB		= ranlib
-
 all:		${NAME}
 
-.c.o:		@${CC} ${FLAGS} -c $< -o ${<:.c=.o}
+%.o:%.c		
+			${CC} ${FLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-					@ar rc ${NAME} ${OBJS}
-					@${LIB} ${NAME}
+					ar rcs ${NAME} ${OBJS}
 
 clean:
-					@rm -f ${OBJS}
+					rm -f ${OBJS}
 
 fclean:		clean
-					@rm -f ${NAME}
+					rm -f ${NAME}
 
 re:					fclean all
 

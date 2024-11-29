@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:19:56 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:34:56 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/29 08:35:17 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	ft_print_hex(unsigned long long nb, const char form)
 		l += ft_print_hex(nb % 16, form);
 	}
 	else
-		l += ft_printchar(base[nb % 16]);
+		l += ft_printchar(base[nb]);
 	return (l);
 }

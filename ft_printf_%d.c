@@ -6,11 +6,11 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 14:35:00 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:45:42 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/11/29 08:33:47 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_printd(int nb)
 {
@@ -21,8 +21,8 @@ int	ft_printd(int nb)
 	l = 0;
 	if (n < 0)
 	{
-		l += write (1, "-", 1);
-		n *= -1;
+		l += write(1, "-", 1);
+		n = -n;
 	}
 	if (n >= 10)
 	{
