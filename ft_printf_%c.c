@@ -6,13 +6,14 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:08:37 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/28 18:34:42 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/12/21 12:09:05 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printchar(char c)
+int	ft_printchar(int c)
 {
-	return (write (1, &c, 1));
+	write (1, &c, 1);
+	return (1);
 }

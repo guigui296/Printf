@@ -6,7 +6,7 @@
 /*   By: gbehra <gbehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:08:59 by gbehra            #+#    #+#             */
-/*   Updated: 2024/11/29 10:19:55 by gbehra           ###   ########.fr       */
+/*   Updated: 2024/12/21 12:15:33 by gbehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_conver(va_list args, const char format)
 	else if (format == 'c')
 		len = ft_printchar(va_arg(args, int));
 	else if (format == 's')
-		len = ft_prints(va_arg(args, char *));
+		len = ft_prints(va_arg(args, const char *));
 	else if (format == 'x')
 		len = ft_print_hex(va_arg(args, unsigned int), format);
 	else if (format == 'X')
